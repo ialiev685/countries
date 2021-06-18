@@ -54,7 +54,9 @@ modal.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", getAllCountries);
+
+function getAllCountries(e) {
   let items = countriesListItem(arr);
 
   coutriesList.insertAdjacentHTML("afterbegin", items);
@@ -71,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("is-hidden");
     });
   });
-});
+}
 
 function clearModalContent() {
   modalContent.innerHTML = "";
